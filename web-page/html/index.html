@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- build:css style.css -->
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <!-- endbuild -->
+    <style>
+      .page {
+        display: none;
+      }
+    </style>
+    <title>DA121-IoT</title>
+  </head>
+
+  <body class="text-center">
+
+    <div class="container">
+      
+  
+      <div class="main-menu">
+        <h3 class="pb-4 pt-5">ESP8266 WiFi Manager</h3>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <img src="icons/wifi-solid.svg" width="20">
+              </span>
+            </div>
+            
+            <input id="ssidInputField" type="text" class="form-control" placeholder="SSID" aria-label="SSID" aria-describedby="basic-addon1">
+
+            <div class="input-group-append">
+              <div class="dropdown dropdown-container">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Scan Nets</button>
+                <div class="dropdown-menu" id="ssidDropDown" aria-labelledby="dropdownMenuButton">
+                  <!--
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  -->
+                  <div class="text-center list-network-spinner">
+                    <p>Scanning</p>
+                    <div class="spinner-grow text-primary" role="status">
+                      <span class="sr-only"></span>
+                    </div>
+                  </div>    
+                </div>
+              </div>              
+            </div>
+        </div>
+  
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">
+                <img src="icons/key-solid.svg" width="20">
+              </span>
+            </div>
+            <input id="passInputField" type="password" class="form-control pwd" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+
+            <div class="input-group-append">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary reveal" type="button" id="button-addon3">
+                    <img id="eye-icon" src="icons/eye-solid.svg" width="20">
+                </button>
+              </div>
+            </div>
+        </div>
+
+        <button id="checkHardwareBtn" type="button" class="mt-3 btn btn-secondary">Check Hardware</button>
+        <button id="connectBtn" type="button" class="mt-3 btn btn-primary">Connect!</button>    
+        
+        <div hidden class="mt-4 text-center connecting-spinner">
+          <p id="connectingLabel">Connecting</p>
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only"></span>
+          </div>            
+        </div>
+        
+      </div>
+
+
+
+    </div>
+
+
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- build:js script.js -->
+    <script src='js/jquery-3.4.0.min.js'></script>
+    <script src='js/popper.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src="js/websocket.js"></script>    
+    <script src="js/index.js"></script>
+    <script src="js/wificonfig.js"></script>
+    <script src="js/control.js"></script>    
+    <!-- endbuild -->
+  </body>
+</html>
